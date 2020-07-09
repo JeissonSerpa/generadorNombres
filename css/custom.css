@@ -12,6 +12,11 @@ h1 {
     font-size: 34px;
 }
 
+h4{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
 form {
     background-color: white;
     padding: 50px;
@@ -22,8 +27,7 @@ form {
     width: 80%;
     text-align: center;
     margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #56CCF2; 
+    padding: 6px 20px;
     background: rgb(219, 246, 255); 
 }
 .lista li:last-child{
