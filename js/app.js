@@ -29,15 +29,13 @@ function buscarNombre(e){
       url += `amount=${cantidad}&`;
    }
 
-   //Crear la conexion a AJAX
+   //Migrag proyecto a FetchAPI
 
-   const xhr = new XMLHttpRequest();
-
-   xhr.open('GET', url, true);
-
-   xhr.onload = function(){
-      if(this.status === 200){
-         const nombres = JSON.parse(this.responseText);
+   fetch(url)
+      .then(function(res){
+         return res.json();
+      })
+      .then(function(nombres){
          const resultado = document.querySelector('#resultado');
 
          let htmlNombre = '<h4>Nombres Generados</h4>';
@@ -48,8 +46,6 @@ function buscarNombre(e){
          htmlNombre += '</ul>';
 
          resultado.innerHTML = htmlNombre;
-      }
-   }
-
-   xhr.send();
+      });
 }
+
