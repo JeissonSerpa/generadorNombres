@@ -32,10 +32,8 @@ function buscarNombre(e){
    //Migrag proyecto a FetchAPI
 
    fetch(url)
-      .then(function(res){
-         return res.json();
-      })
-      .then(function(nombres){
+      .then(res => res.json())
+      .then((nombres) =>{
          const resultado = document.querySelector('#resultado');
 
          let htmlNombre = '<h4>Nombres Generados</h4>';
